@@ -1,5 +1,7 @@
 Option Explicit
 
+' This user defined function can be used on sheet to get regex matches from cell strings
+
 Sub REGEX_GET()
 
   ' Clear any existing results
