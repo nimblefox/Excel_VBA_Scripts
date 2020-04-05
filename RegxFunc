@@ -1,0 +1,28 @@
+Function RegxFunc(strInput As String, regexPattern As String) As String
+    
+'Declare Variables
+    Dim regEx As New REGEXP
+    Dim arrayMatches()
+    Dim i As Long
+    
+'Declare regEx attributes
+    With regEx
+        .Global = True
+        .MultiLine = True
+        .IgnoreCase = False
+        .Pattern = regexPattern
+    End With
+
+    If regEx.Test(strInput) Then  'If pattern is found
+        For Each Match In regEx.Execute(strInput)
+            ReDim Preserve arrayMatches(i)
+            arrayMatches(i) = Match.Value ' assign multiple matches to array
+            i = i + 1
+        Next
+        RegxFunc = Join(arrayMatches, ", ")
+    Else
+        RegxFunc = "not matched"
+    End If
+    
+End Function
+
