@@ -1,4 +1,7 @@
 Function RegxFunc(strInput As String, regexPattern As String) As String
+'Function to check and return a regex pattern
+'Inputs are cell value, regexpattern string
+'Example : RegxFunc(A1,"\d{5}")
     
 'Declare Variables
     Dim regEx As New REGEXP
