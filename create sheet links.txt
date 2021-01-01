@@ -1,0 +1,23 @@
+Sub create_sheet_links()
+
+Dim i As Integer
+Dim j As Integer
+Dim x As String
+Dim y As String
+Dim z As String
+
+j = 2
+
+For i = 1 To 4
+ Worksheets("Main").Select
+ x = "A" & CStr(j)                              ' j starts from 2 so that I can fill links from A2
+ Range(x).Select                                ' to fill main sheet rows with links
+ y = "'TC" & CStr(i) & CStr("'") & CStr("!A1")  'to get address of TC1!A1
+ z = "TC" & CStr(i) & CStr("link")              'name of link
+ ActiveCell.Hyperlinks.Add Anchor:=Selection, Address:="", SubAddress:=y, TextToDisplay:=z
+ j = j + 1
+ 
+Next i
+
+End Sub
+

@@ -1,0 +1,14 @@
+Sub Create_named_Sheets()
+
+Dim i As Integer
+Dim pop As String
+
+For i = 1 To 10 'number of tabs
+pop = "Tab" & CStr(i)
+
+    Sheets.Add(After:=Sheets(Sheets.Count)).Name = pop
+
+Next i
+
+
+End Sub

@@ -1,0 +1,16 @@
+Sub paste_content()
+
+Dim sht As Worksheet
+
+Sheets("Main").Range("A1").Copy 'to copy content from Main sheet
+
+' loop to paste in multiple sheets
+For Each sht In Worksheets
+
+sht.Range("A1").PasteSpecial
+
+Next
+
+Application.CutCopyMode = False
+
+End Sub
