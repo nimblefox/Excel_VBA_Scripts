@@ -1,0 +1,20 @@
+Public FullPath As String
+
+Sub GetPath()
+
+    On Error GoTo err
+    
+    With Application.FileDialog(msoFileDialogFilePicker)
+    
+    'To allow or disable to multi select
+    .AllowMultiSelect = False
+
+    .Show
+    
+    FullPath = .SelectedItems.Item(1)
+    
+    End With
+    
+
+err:
+    Exit Sub
