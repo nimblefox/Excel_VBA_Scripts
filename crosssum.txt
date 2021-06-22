@@ -1,0 +1,16 @@
+Sub CrossSum()
+
+'Paste all he numbers in column A, starting from A2
+' Copy and transpose them in row 1, from B2
+
+' Get no of rows in column A
+Dim x As Integer
+x = Range("A1").End(xlDown).Row
+
+' loop for adding Bj and Ai
+For j = 2 To x
+    For i = 2 To x
+        Cells(i, j).Value = Cells(1, j) + Cells(i, 1)
+    Next
+Next
+End Sub
