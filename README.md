@@ -7,3 +7,4 @@
  5. create named sheets - useful to create multiple sheets with names
  6. create sheet links - To create an Index of links to each sheet, to complement script 5
  7. copy paste to multiple sheets - basic script to copy a cell content to multiple sheets
+ 8. crosssum - one to many sum, to find the (A+B) combination you are looking for
